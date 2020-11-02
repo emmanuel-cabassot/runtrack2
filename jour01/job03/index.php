@@ -28,6 +28,11 @@
         <td>$nom[2]</td>
         <td>$valeur[2]</td>
      </tr>
+     <tr>
+        <td>$type[3]</td>
+        <td>$nom[3]</td>
+        <td>$valeur[3]</td>
+     </tr>
      </table>";
 ?>
 
