@@ -1,5 +1,5 @@
 <?php
-//Entrée les valeurs de GET dans un tableau
+//Entre les valeurs de GET dans un tableau
 foreach ($_GET as $key => $value) {
     $table[] = $key;
     ;

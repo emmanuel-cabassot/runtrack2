@@ -1,6 +1,6 @@
-<!-- Job 01
-Développez un algorithme qui affiche le nombre d’arguments GET.
-Tips : Pour tester, créez un formulaire html de type GET avec différents
+<!-- Job 03
+Développez un algorithme qui affiche le nombre d’arguments POST.
+Tips : Pour tester, créez un formulaire html de type POST avec différents
 input. -->
 
 <!DOCTYPE html>
@@ -11,8 +11,7 @@ input. -->
     <title>Document</title>
 </head>
 <body>   
-<div class="inscriptionlab">
-                <form  action="cible1.php" method="get">
+                <form  action="cible3.php" method="post">
                     
                         <label for="name">Nom</label>
                         <input type="text" name="nom" id="name">
@@ -23,7 +22,10 @@ input. -->
                         <label for="date">Date de naissance</label>
                         <input type="date" name="date" id="date">
                         <label for="confirmaton"></label>
-                        <input type="submit" name="confirmer" id="confirmation" formaction="cible1.php" inputmode="">
+                        <input type="submit" name="confirmer" id="confirmation" formaction="cible3.php" inputmode="">
                 </form>
+
+
 </body>
 </html>
+
