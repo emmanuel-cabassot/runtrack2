@@ -16,6 +16,8 @@
 
 
 
+
+
 <!-- - Créez une variable myBool, affectez à cette variable true, affichez le contenu de la variable. Affectez false à la variable
  et affichez à nouveau le contenu.  -->
 
