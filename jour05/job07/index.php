@@ -13,7 +13,7 @@ ex : si decalage vaut 1, e devient f. Si décalage vaut 3, z devient c.
 - “plateforme”, une fonction qui prend en paramètre “str”. Elle écrit “str”
 en ajoutant un “_” aux mots finissant par “me”. -->
 
-<form  action="cible7.php" method="get">
+<form  action="cible7.php" method="POST">
     <label for="str">Nom</label>
     <input type="text" name="str" id="str" required>
 
@@ -26,9 +26,10 @@ en ajoutant un “_” aux mots finissant par “me”. -->
     </label>
 
     <label for="confirmer"></label>
-    <input type="submit" name="confirmer" id="confirmer" formaction="cible7.php" inputmode="">
+    <input type="submit" name="confirmer" id="confirmer" required> 
 </form>
+
 <?php
-echo $str
+
 
 ?>
