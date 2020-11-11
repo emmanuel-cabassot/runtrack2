@@ -1,13 +1,14 @@
 <!-- Job 04
 Créez une string nommée str et affectez y “Dans l'espace, personne ne
 vous entend crier”. Créez un algorithme qui parcourt, compte et affiche le
-nombre de caractères présents dans cette chaîne. -->
+nombre de caractères présents dans cette chaîne.
+ -->
 
-<?php
+ <?php
 $str = 'Dans l\'espace, personne ne vous entend crier';
-for ($total=0; isset($str[$total]) ; $total++) 
-{ 
-    
+
+//Boucle qui va compter et afficher le nombre de caractères
+for ($i=0; isset($str[$i]) ; $i++) { 
 }
-echo $total;
-?>
+echo 'il y a '.$i.' caractères';
+ ?>

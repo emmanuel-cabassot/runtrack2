@@ -1,80 +1,67 @@
 <!-- Job 05
-Créez une string nommée str et affectez y “On n est pas le meilleur quand
+Créez une string nommée str et affectez y “On nest pas le meilleur quand
 on le croit mais quand on le sait”. Créez un dictionnaire nommé dic qui a
 comme keys “consonnes” et “voyelles”. Créez un algorithme qui parcourt,
 compte et stocke le nombre d'occurrences de consonnes et de voyelles de
 str. Affichez ces résultats dans un tableau html qui a comme thead
 “Voyelles” et “Consonnes”. -->
 
-
 <?php
-$str = 'On n est pas le meilleur quand on le croit mais quand on le sait';
-$voyelles = 'aAeEiIoOuUyY';
-$consonnes = 'bBcCdDfFfFhHjJkKlLmMnNpPqQrRsStTvVwWxXzZ';
-
-$dic = [
-    'voyelles' => [], 
-    'consonnes' => [],
+$str = 'On nest pas le meilleur quand on le croit mais quand on le sait';
+$dic = 
+[
+    'voyelles' => 'aAeEiIoOuUyY',
+    
+    'consonnes' => 'bBcCdDfFfFhHjJkKlLmMnNpPqQrRsStTvVwWxXzZ',
+    
 ];
 
-//Combien de caractères dans  $str?
-for ($total=0; isset($str[$total]) ; $total++) 
-{ 
-    
+//Nombre d'occurences dans $str
+for ($nbstr=0; isset($str[$nbstr]) ; $nbstr++) { 
 }
 
-//Combien de caractères dan $voyelles?
-for ($total_v=0; isset($voyelles[$total_v]) ; $total_v++) 
-{ 
-    
+//Nombre d'occurences dans voyelles
+for ($nbvoyelles=0; isset($dic['voyelles'][$nbvoyelles]) ; $nbvoyelles++) {    
 }
 
-//Combien de caractères dans $consonnes?
-for ($total_c=0; isset($consonnes[$total_c]) ; $total_c++) 
-{ 
-    
+//Nombre d'occurences dans consonnes
+for ($nbconsonnes=0; isset($dic['consonnes'][$nbconsonnes]) ; $nbconsonnes++) { 
 }
 
-//Boucles qui vont servir à ajouter des le tableau $dic les voyelles.
-for ($nombre=0; $nombre < $total ; $nombre++) 
+
+for ($tourstr=0; $tourstr < $nbstr ; $tourstr++) // Va aider a parcourir $str
+{ 
+    for ($tourvoyelles=0; $tourvoyelles < $nbvoyelles ; $tourvoyelles++) // Va aider a parcourir $voyelles
     { 
-        for ($nbr=0; $nbr < $total_v; $nbr++) 
-        { 
-            if ($str[$nombre] == $voyelles[$nbr]) 
-            {
+        if ($str[$tourstr] === $dic['voyelles'][$tourvoyelles]) // On compare
+        {
             
-            $dic['voyelles'][]=$str[$nombre];       //Insertion des voyelles dans le tableau.
+            $nombrevoyelles[] = $str [$tourstr]; // On enregistre le resultat dans une nouvelle variable
             
-            }  
-           
         }
-        for ($nbr=0; $nbr < $total_c; $nbr++) 
-        { 
-            if ($str[$nombre] == $consonnes[$nbr]) 
-            {
+    }
+    for ($tourconsonnes=0; $tourconsonnes < $nbconsonnes ; $tourconsonnes++) //Va aider a parcourir $consonnes
+    { 
+        if ($str[$tourstr] === $dic['consonnes'][$tourconsonnes])  // On Compare
+        {
             
-            $dic['consonnes'][]=$str[$nombre];       //Insertion des consonnes dans le tableau.
+            $nombreconsonnes[] =  $str[$tourstr];  // On enregistre le resultat dans une nouvelle variable
             
-            }  
-           
         }
-        
     }
 
-//Combien de caractères dans $dic 'consonnes'?
-for ($total_consonnes=0; isset($dic['consonnes'][$total_consonnes]) ; $total_consonnes++) 
-{ 
-
 }
 
-//Combien de caractères dans $dic 'voyelles'?
-for ($total_voyelles=0; isset($dic['voyelles'][$total_voyelles]) ; $total_voyelles++) 
-{ 
-    
+//Nombre de consonnes dans $str
+for ($nombretourconsonnes=0; isset($nombreconsonnes[$nombretourconsonnes]) ; $nombretourconsonnes++) {    
 }
 
-// TABLEAU
-echo '
+//Nombre de voyelles dans $str
+for ($nombretourvoyelles=0; isset($nombrevoyelles[$nombretourvoyelles]) ; $nombretourvoyelles++) {    
+}
+
+echo ' Voici un algorithme qui va séparer les consonnes des voyelles et qui va les compter!!<br>
+La phrase :<b>'.$str.'</b><br>
 <table>
     <thead>
         <tr>
@@ -83,8 +70,20 @@ echo '
         </tr>
     </thead>
         <tr>
-            <td>'.$total_consonnes.'</td>
-            <td>'.$total_voyelles.'</td>
+            <td>'.$nombretourconsonnes.'</td>
+            <td>'.$nombretourvoyelles.'</td>
+        </tr>
+        <tr>
+            <td>';
+            foreach ($nombreconsonnes as  $valueconsonnes) {
+                echo $valueconsonnes;
+            }
+            echo '</td>
+            <td>';
+            foreach ($nombrevoyelles as  $valuevoyelles) {
+                echo $valuevoyelles;
+            }
+            echo'</td>
         </tr>
 </table>
 ';
