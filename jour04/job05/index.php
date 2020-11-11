@@ -13,18 +13,28 @@ cauchemar”. -->
     <title>Document</title>
     </head>
 <body>   
-            <form class="connexion" action="cible5.php" method="post">
-                  <label for="nom">Nom</label>
-                  <input type="text" name="nom" id="nom">
-                    
-                  <label for="pass">Mot de passe </label>
-                  <input type="password" name="pass" id="pass" minlenght="5" placeholder="5 caractères" required>
-                    
-                  <label for="valider"></label>
-                  <input class="valider" type="submit" value="Valider" id="valider" formaction="cible5.php">
-            </form>
+    <form action="" method="post">
+        <label for="nom">Nom</label>
+        <input type="text" name="nom" id="nom">
+        
+        <label for="pass">Mot de passe </label>
+        <input type="password" name="pass" id="pass" minlenght="5" placeholder="5 caractères" required>
+        
+        <label for="valider"></label>
+        <input class="valider" type="submit" value="Valider" id="valider" value="ok">
+    </form>
 </body>
 </html>
+<?php
+if (isset($_POST['nom']) AND isset($_POST['pass'])) {
+    if ($_POST['nom'] === 'John' AND $_POST['pass'] === 'Rambo') {
+        echo 'c\'est pas ma guerre';
+    }
+    else {
+        echo 'Votre pire cauchemar';
+    }
+}
+?>
 
 
 

@@ -8,8 +8,7 @@ troisième etc.. et le dernier par le premier. -->
 $str = 'Certaines choses changent, et d\'autres ne changeront jamais.';
 
 //nombre d'occurences dans $str
-for ($nb_str=0; isset($str[$nb_str]) ; $nb_str++) { 
-    
+for ($nb_str=0; isset($str[$nb_str]) ; $nb_str++) {    
 }
 $nb_str = $nb_str - 1;
 
@@ -32,9 +31,6 @@ for ($tour_str=0; $tour_str <= $nb_str ; $tour_str++)
 for ($i=0; $i <= $nb_str ; $i++) { 
     echo $decale_str[$i];
 }
-
-
-
 ?>
 
 
