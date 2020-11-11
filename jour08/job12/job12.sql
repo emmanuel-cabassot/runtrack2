@@ -1,0 +1,1 @@
+SELECT `nom`, `id_etage`, `capacite` FROM `salles` ORDER BY capacite DESC
