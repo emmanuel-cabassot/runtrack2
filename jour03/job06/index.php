@@ -4,23 +4,14 @@ possede finissent par nous posseder.”. Créez un algorithme qui parcourt et
 écrit cette chaine à l’envers. -->
 
 <?php
-$str = 'Les choses que l\'on possede finissent par nous posseder.';
-$envers = [];
+$str = 'Les choses que l\'on possede finissent par nous posseder';
 
-//Combien de caractères dans  $str?
-for ($total=0; isset($str[$total]) ; $total++) { 
-    
+// Compte le nombre d'occurences dans $str
+for ($nb_str=0; isset($str[$nb_str]) ; $nb_str++) { 
 }
 
-// Prend la variable $str du dernier élément au premier et l'enregistre dans le tableau $envers
-for ($total ; $total >= 0 ; $total = $total - 1) {  
-    $envers[] = $str[$total];
+//Boucle qui met $str à l'envers
+for ($envers_str = $nb_str - 1; $envers_str >= 0 ; $envers_str = $envers_str - 1) { 
+    echo $str[$envers_str];
 }
-
-//affiche le texte à l'envers
-foreach ($envers as $enver) {
-    echo $enver;
-}
-
-
 ?>

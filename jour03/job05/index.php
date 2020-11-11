@@ -7,12 +7,12 @@ str. Affichez ces résultats dans un tableau html qui a comme thead
 “Voyelles” et “Consonnes”. -->
 
 <?php
-$str = 'On nest pas le meilleur quand on le croit mais quand on le sait';
+$str = 'On n\'est pas le meilleur quand on le croit mais quand on le sait';
 $dic = 
 [
     'voyelles' => 'aAeEiIoOuUyY',
     
-    'consonnes' => 'bBcCdDfFfFhHjJkKlLmMnNpPqQrRsStTvVwWxXzZ',
+    'consonnes' => 'bBcCdDfFfFhHjJkKlLmMnNpPqQrRsStTvVwWxXzZ',0
     
 ];
 

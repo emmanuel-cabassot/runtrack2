@@ -7,20 +7,41 @@ troisième etc.. et le dernier par le premier. -->
 <?php
 $str = 'Certaines choses changent, et d\'autres ne changeront jamais.';
 
-for ($total=0; isset($str[$total]) ; $total++) { 
+//nombre d'occurences dans $str
+for ($nb_str=0; isset($str[$nb_str]) ; $nb_str++) { 
     
 }
+$nb_str = $nb_str - 1;
 
 
-
-for ($nombre=0; $nombre <= $total-2; $nombre++) { 
-    $decale [] = $str [$nombre + 1];
-    echo $decale [$nombre];
+//Boucle qui va décalée $str
+for ($tour_str=0; $tour_str <= $nb_str ; $tour_str++) 
+{ 
+    if ($tour_str === $nb_str) 
+    {
+        $nb_str;
+        $decale_str[] = $str[0];    
+    }
+    else 
+    {
+        $decale_str[] = $str[$tour_str + 1] ;
+    }
+        
 }
 
-$decale [] = $str[0];
-echo $decale[$nombre];
+for ($i=0; $i <= $nb_str ; $i++) { 
+    echo $decale_str[$i];
+}
 
 
 
 ?>
+
+
+
+
+
+
+
+
+
