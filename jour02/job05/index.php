@@ -21,7 +21,7 @@ echo '2 <br>';
                 $div++;
             }
             else {
-            break;
+            break; 
             }
                         
         }
