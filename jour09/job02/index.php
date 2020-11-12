@@ -1,23 +1,23 @@
-<!-- Job 01
+<!-- Job 02
 En utilisant php et mysqli, connectez-vous à la base de données “jour08”. A
-l’aide d’une requête SQL, récupérez l’ensemble des informations de la
-table etudiants. Affichez le résultat de cette requête dans un tableau html.
-La première ligne de votre tableau html (thead) doit contenir le nom des
-champs. Les suivantes (tbody) doivent contenir les données présentes
-dans votre base de données. -->
+l’aide d’une requête SQL, récupérez le nom et la capacite de chacune des
+salles. Affichez le résultat de cette requête dans un tableau html. La
+première ligne de votre tableau html doit contenir le nom des champs. Les
+suivantes doivent contenir les données présentes dans votre base de
+données. -->
 <?php
 $db = mysqli_connect("localhost", "root", "", "jour08");
-$requete = "SELECT * FROM `etudiants` WHERE 1";
+$requete = "SELECT `nom`, `capacite` FROM `salles` WHERE 1";
 $query = mysqli_query($db, $requete);
-$resultat = mysqli_fetch_assoc($query);
-$donnees = mysqli_fetch_all($query);
+$champs  = mysqli_fetch_assoc($query);
+$donnees= mysqli_fetch_all($query);
 
-//compte le nombre d'occurences dans $donnees[]
-for ($ii=0; isset($donnees[$ii]) ; $ii++) {  
+//nombre d'occurences dans $donnees[]
+for ($ii=0; isset($donnees[$ii]); $ii++) { 
 }
 
-//compte le nombre d'occurences dans $donnees[][]
-for ($nbi=0; isset($donnees[0][$nbi]) ; $nbi++) {    
+//nombre d'occurences dans $donnees[][]
+for ($nbi=0; isset($donnees[0][$nbi]) ; $nbi++) { 
 }
 
 ?>
@@ -32,7 +32,7 @@ for ($nbi=0; isset($donnees[0][$nbi]) ; $nbi++) {
     <table>
     <thead>
         <tr>
-            <?php foreach ($resultat as $key => $value) 
+            <?php foreach ($champs as $key => $value) 
             {
             echo '<td>'.$key.'</td>';
             }?>
