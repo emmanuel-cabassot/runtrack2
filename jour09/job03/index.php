@@ -1,31 +1,33 @@
-<!-- Job 01
+<!-- Job 03
 En utilisant php et mysqli, connectez-vous à la base de données “jour08”. A
-l’aide d’une requête SQL, récupérez l’ensemble des informations de la
-table etudiants. Affichez le résultat de cette requête dans un tableau html.
-La première ligne de votre tableau html (thead) doit contenir le nom des
-champs. Les suivantes (tbody) doivent contenir les données présentes
-dans votre base de données. -->
+l’aide d’une requête SQL, récupérez le prenom, le nom et la date de
+naissance des étudiants de sexe féminin. Affichez le résultat de cette
+requête dans un tableau html. La première ligne de votre tableau html doit
+contenir le nom des champs. Les suivantes doivent contenir les données
+présentes dans votre base de données. -->
+
 <?php
 $db = mysqli_connect("localhost", "root", "", "jour08");
-$requete = "SELECT * FROM `etudiants` WHERE 1";
-
-// Query pour $resultat
+$requete = "SELECT `prenom`, `nom`, `naissance`FROM `etudiants` WHERE sexe = 'Femme'";
+// Query pour $champs
 $query = mysqli_query($db, $requete);
-$resultat = mysqli_fetch_assoc($query);
+$champs = mysqli_fetch_assoc($query);
 
 // Query pour $donnees
-$query_donnees = mysqli_query($db, $requete);
-$donnees = mysqli_fetch_all($query_donnees);
+$queryd = mysqli_query($db, $requete);
+$donnees = mysqli_fetch_all($queryd);
 
-//compte le nombre d'occurences dans $donnees[]
-for ($ii=0; isset($donnees[$ii]) ; $ii++) {  
+
+// Compte le nombre d'occurences dans $donnees[]
+for ($ii=0; isset($donnees[$ii]); $ii++) { 
 }
 
-//compte le nombre d'occurences dans $donnees[][]
-for ($nbi=0; isset($donnees[0][$nbi]) ; $nbi++) {    
-}
 
+// Compte le nombre d'occurences dans $donnees[0][]
+for ($nbi=0; isset($donnees[0][$nbi]) ; $nbi++) { 
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,7 +39,7 @@ for ($nbi=0; isset($donnees[0][$nbi]) ; $nbi++) {
     <table>
     <thead>
         <tr>
-            <?php foreach ($resultat as $key => $value) 
+            <?php foreach ($champs as $key => $value) 
             {
             echo '<td>'.$key.'</td>';
             }?>

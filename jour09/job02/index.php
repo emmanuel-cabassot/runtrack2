@@ -8,9 +8,14 @@ données. -->
 <?php
 $db = mysqli_connect("localhost", "root", "", "jour08");
 $requete = "SELECT `nom`, `capacite` FROM `salles` WHERE 1";
+
+// Query pour $champs
 $query = mysqli_query($db, $requete);
 $champs  = mysqli_fetch_assoc($query);
-$donnees= mysqli_fetch_all($query);
+
+// Query pour $donnees
+$query_donnees = mysqli_query($db, $requete);
+$donnees= mysqli_fetch_all($query_donnees);
 
 //nombre d'occurences dans $donnees[]
 for ($ii=0; isset($donnees[$ii]); $ii++) { 
