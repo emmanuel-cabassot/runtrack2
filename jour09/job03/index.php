@@ -14,8 +14,8 @@ $query = mysqli_query($db, $requete);
 $champs = mysqli_fetch_assoc($query);
 
 // Query pour $donnees
-$queryd = mysqli_query($db, $requete);
-$donnees = mysqli_fetch_all($queryd);
+$query_donnees = mysqli_query($db, $requete);
+$donnees = mysqli_fetch_all($query_donnees);
 
 
 // Compte le nombre d'occurences dans $donnees[]
