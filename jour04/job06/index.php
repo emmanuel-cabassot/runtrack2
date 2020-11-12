@@ -29,7 +29,8 @@ if (isset($_GET['nombre']))
     {
         echo $_GET['nombre'].' est un chiffre impair.';
     }
-    else {
+    else 
+    {
         echo $_GET['nombre']. ' est un chiffre pair';
     }
 }
